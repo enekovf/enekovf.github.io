@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MINT</title>
+<link rel="icon" href="icono.png">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #6b6b6b;
+    --accent: #2563eb;
+    --border: #e5e5e5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14161a;
+      --fg: #f0f0f0;
+      --muted: #9a9a9a;
+      --accent: #6ea8fe;
+      --border: #2a2d33;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+  }
+  main {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 64px 16px;
+  }
+  a {
+    color: var(--accent);
+  }
+  .cabecera {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .cabecera img {
+    width: 64px;
+    height: 64px;
+    border-radius: 14px;
+  }
+  h1 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  p.tagline {
+    color: var(--muted);
+    margin: 0;
+  }
+  h2 {
+    font-size: 1.05rem;
+    margin-top: 40px;
+  }
+  ul {
+    padding-left: 20px;
+  }
+  li {
+    margin-bottom: 8px;
+  }
+  .back {
+    display: inline-block;
+    margin-bottom: 32px;
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+<main>
+  <a class="back" href="../index.html">&larr; Eneko</a>
+
+  <div class="cabecera">
+    <img src="icono.png" alt="">
+    <div>
+      <h1>MINT</h1>
+      <p class="tagline">Lo que ves, juegas y escuchas, en un solo sitio.</p>
+    </div>
+  </div>
+
+  <p>
+    MINT es una aplicación personal, para Windows y Android, para llevar la cuenta de lo que sigues:
+  </p>
+  <ul>
+    <li>Películas y series: lo que has visto, lo que quieres ver y tus notas.</li>
+    <li>Juegos: los que tienes, los que juegas y sus precios.</li>
+    <li>Música, podcasts y noticias.</li>
+  </ul>
+
+  <h2>Tus datos, en tus dispositivos</h2>
+  <p>
+    Todo se guarda en tu dispositivo. Si conectas tu cuenta de Google, MINT deja una copia en una
+    carpeta propia de tu Google Drive para tener lo mismo en el ordenador y en el móvil. Solo puede
+    ver los archivos que crea él.
+  </p>
+
+  <p><a href="privacidad.html">Política de privacidad</a></p>
+</main>
+</body>
+</html>
