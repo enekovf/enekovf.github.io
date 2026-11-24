@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidad — Enko Notes</title>
+<meta name="description" content="Cómo Enko Notes usa y almacena tus datos, cómo funciona la sincronización opcional con Google Drive y cómo desconectarla o borrar la información.">
+<link rel="canonical" href="https://enekovf.github.io/EnkoNotes/privacidad.html">
+<link rel="icon" type="image/png" href="icono-120.png"><link rel="stylesheet" href="styles.css">
+</head>
+<body><main>
+<a class="back" href="index.html">← Enko Notes</a>
+<header><h1>Política de privacidad de Enko Notes</h1><p class="updated">Última actualización: <time datetime="2026-11-24">24 de noviembre de 2026</time></p></header>
+<p>Esta política describe el tratamiento de información en Enko Notes para Windows y Android (en Android, identificada por el paquete <code>com.enkonotes.app</code>). El responsable del proyecto es Eneko; puedes contactar en <a href="mailto:eneko6669@gmail.com">eneko6669@gmail.com</a>.</p>
+<div class="summary"><p>Tus notas y tableros se guardan en tu dispositivo. Google Drive es opcional: solo se utiliza si conectas tu cuenta y activas la sincronización, y la aplicación solo accede a una carpeta llamada «Enko Notes» que ella misma crea. Enko Notes no dispone de un servidor propio que reciba tus datos.</p></div>
+<nav aria-label="Contenido de la política"><ul><li><a href="#datos">Datos locales</a></li><li><a href="#drive">Google Drive</a></li><li><a href="#otros">Copias, enlaces y otros destinos</a></li><li><a href="#borrado">Conservación y borrado</a></li><li><a href="#contacto">Contacto</a></li></ul></nav>
+<section id="datos"><h2>1. Datos que utiliza la aplicación</h2>
+<p>Enko Notes guarda en una base de datos local, en el almacenamiento privado de la aplicación, el contenido que tú creas: notas, carpetas, etiquetas, tableros, columnas, tarjetas (con sus fechas, repeticiones y avisos), enlaces, los archivos adjuntos que añades y tus preferencias. En Windows se encuentra en la carpeta de datos de la aplicación; en Android, en el almacenamiento privado de la app, al que no acceden otras aplicaciones.</p>
+<p>Los archivos adjuntos se copian al almacén interno de la aplicación. Lo que otras apps comparten con Enko Notes (texto, enlaces, imágenes o archivos) solo se guarda cuando eliges dónde añadirlo.</p>
+<p>No se recoge información de contactos, ubicación, micrófono ni cámara. Enko Notes no incluye publicidad, analítica ni informes automáticos de fallos, y no vende ni cede tus datos.</p></section>
+<section><h2>2. Permisos en Android</h2>
+<ul>
+<li><strong>Internet:</strong> para la sincronización opcional con Google Drive y para obtener la vista previa de los enlaces que añadas.</li>
+<li><strong>Notificaciones y alarmas exactas:</strong> para mostrar a su hora los avisos de las tarjetas con fecha. Los avisos se programan en tu propio dispositivo.</li>
+<li><strong>Iniciar al arrancar:</strong> para volver a programar esos avisos tras reiniciar el móvil.</li>
+<li><strong>Compartir:</strong> la app aparece como destino al compartir texto, enlaces, imágenes y archivos desde otras aplicaciones. Elegir archivos para adjuntar o exportar se hace con los selectores del sistema, sin conceder acceso general al almacenamiento.</li>
+</ul></section>
+<section id="drive"><h2>3. Sincronización opcional con Google Drive</h2>
+<p>No necesitas una cuenta para usar Enko Notes. Si decides sincronizar tus dispositivos con Google Drive, la autorización la gestiona Google en tu navegador: la aplicación no recibe tu contraseña. Para ello utiliza un ID de cliente de OAuth de un proyecto de Google Cloud; el proyecto lo crea y controla la persona que configura la sincronización, y el desarrollador no recibe tokens ni datos.</p>
+<p>Se solicita únicamente el permiso <code>https://www.googleapis.com/auth/drive.file</code>. Permite gestionar los archivos creados por la propia aplicación; no concede acceso al resto de los archivos de tu Drive. La aplicación crea en «Mi unidad» una carpeta visible llamada <strong>Enko Notes</strong> y guarda dentro solo sus archivos de sincronización.</p>
+<p>Esos archivos contienen el contenido de tus notas, carpetas, etiquetas, tableros y tarjetas en formato comprimido (lotes de cambios con identificador de dispositivo) y los archivos adjuntos. <strong>No están cifrados por la aplicación</strong>: quien tenga acceso a tu cuenta de Google o a esa carpeta puede leerlos. No los borres, muevas ni renombres desde Drive: la sincronización dejaría de funcionar.</p>
+<p>El token de acceso que entrega Google se guarda en la base de datos local del dispositivo y se usa solo para leer y escribir esa carpeta. Los datos se envían directamente desde tu dispositivo a Google; no pasan por servidores del desarrollador. Se usan únicamente para sincronizar tus propios dispositivos y no se utilizan para publicidad, perfiles comerciales, entrenamiento de modelos de IA ni fines ajenos a la sincronización.</p>
+<p>El uso de información recibida de las API de Google se ajusta a la <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de datos de usuario de los servicios de API de Google</a>, incluidos sus requisitos de <strong>uso limitado</strong>.</p></section>
+<section id="otros"><h2>4. Copias de seguridad, enlaces y otros destinos</h2>
+<p><strong>Copias de seguridad.</strong> La aplicación puede crear una copia diaria automática (archivo ZIP) en su carpeta de datos, conservando las últimas que elijas. La exportación manual escribe un ZIP con las notas en Markdown, los datos y los adjuntos en la ubicación que eliges con el selector del sistema. Los ZIP no están cifrados; si los guardas en la nube o los compartes, el proveedor o el destinatario podrá leerlos.</p>
+<p><strong>Vistas previas de enlaces.</strong> Cuando añades un enlace, la aplicación conecta por HTTPS con esa web para leer su título, descripción e imágenes. Ese servidor puede recibir tu dirección IP, la dirección solicitada y datos técnicos habituales, incluido el nombre «EnkoNotes link preview» como agente de usuario.</p>
+<p><strong>Sincronización por carpeta (Windows).</strong> Como alternativa a Drive, puedes elegir una carpeta del disco; si otro programa (Syncthing, OneDrive u otro) la replica, ese programa y su proveedor aplican su propia política.</p>
+<p>Las visitas a esta página se sirven mediante GitHub Pages, sujeto a la <a href="https://docs.github.com/es/site-policy/privacy-policies/github-general-privacy-statement">política de privacidad de GitHub</a>; esta página no incorpora formularios, analítica ni scripts de seguimiento propios. Consulta también la <a href="https://policies.google.com/privacy?hl=es">Política de Privacidad de Google</a>.</p></section>
+<section id="borrado"><h2>5. Conservación, desconexión y borrado</h2>
+<p>Tus datos permanecen en el dispositivo hasta que los eliminas, borras el almacenamiento de la aplicación o la desinstalas. Las notas y tarjetas que envías a la papelera se eliminan definitivamente pasado el plazo que configures (30 días por defecto). Al eliminar algo definitivamente, la aplicación conserva una marca vacía, sin contenido, solo para que el borrado llegue a tus otros dispositivos.</p>
+<p>Puedes dejar de sincronizar desde Ajustes → Sincronización: la aplicación deja de comunicarse con Google y puedes cerrar la sesión para borrar el token del dispositivo. Los datos que ya estén en tu Drive permanecen hasta que borres la carpeta «Enko Notes»; para retirarlos definitivamente, vacía también la papelera de Drive. Puedes revocar el acceso en cualquier momento desde las <a href="https://myaccount.google.com/connections">conexiones de tu cuenta de Google</a>.</p>
+<p>Desinstalar la aplicación o revocar el permiso no borra por sí solo los datos que haya en Drive ni los ZIP que hayas guardado fuera de la app.</p></section>
+<section><h2>6. Seguridad</h2>
+<p>La aplicación usa el almacenamiento privado del sistema y conexiones HTTPS. La base de datos local y los ZIP no están cifrados por la aplicación; la protección del dispositivo (bloqueo de pantalla, cifrado del sistema) y de tu cuenta de Google es la que protege tus datos. El desarrollador no dispone de acceso remoto a tus datos. Si envías voluntariamente un correo de soporte, solo se utilizará para atender tu consulta; evita adjuntar información privada innecesaria.</p></section>
+<section id="contacto"><h2>7. Tus decisiones y contacto</h2>
+<p>Puedes revisar, editar y eliminar tus datos en la aplicación, exportar una copia, desconectar Google y borrar la carpeta de Drive. Para consultas sobre privacidad o para ejercer los derechos que te correspondan conforme a la normativa aplicable, escribe a <a href="mailto:eneko6669@gmail.com">eneko6669@gmail.com</a>. El desarrollador no puede recuperar ni borrar por ti información que solo está en tu dispositivo o en una cuenta de Drive a la que no tiene acceso.</p></section>
+<section><h2>8. Cambios de esta política</h2><p>Esta página se actualizará cuando cambien las funciones o el tratamiento descrito. Los cambios relevantes se comunicarán antes de utilizar datos para una finalidad nueva que requiera tu autorización.</p></section>
+<footer>Enko Notes · Proyecto personal de Eneko · <a href="index.html">Información de la aplicación</a> · <a href="condiciones.html">Condiciones del servicio</a></footer>
+</main></body></html>
